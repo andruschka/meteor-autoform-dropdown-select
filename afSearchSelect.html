@@ -1,0 +1,26 @@
+<template name="afSearchSelect">
+  <div class="dropdown dropdown-afSearchSelect {{this.atts.className}}">
+    <button data-schema-key="{{instance.dsKey}}" data-value-out="{{instance.valueOut}}"
+    class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      {{instance.labelOut}}
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+      <li class="dropdown-form-group">
+        <input type="text" class="form-control search-input" placeholder="{{instance.inputPlaceholder}}">
+      </li>
+      {{#if instance.searchInput.get}}
+        <li role="separator" class="divider"></li>
+        {{#if instance.loading.get}}
+          <li class="dropdown-header">Loading</li>
+        {{else}}
+          {{#each instance.searchResults.get}}
+            <li class="selectable-option dropdown-option-item">{{label}}</li>
+          {{else}}
+            <li class="dropdown-header">Nothing found ...</li>
+          {{/each}}
+        {{/if}}
+      {{/if}}
+    </ul>
+  </div>
+</template>
