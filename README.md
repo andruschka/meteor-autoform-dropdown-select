@@ -60,7 +60,8 @@ var Item = new SimpleSchema({
     label: "Supplier",
     autoform: {
       type: 'dropdown-select',
-      placeholder: "Select Supplier ...",
+      placeholder: "Select Supplier", // placeholder for button ...
+      inputPlaceholder: "Type something ...", // ... and for input
       fetchMethods: {
         initial: 'supplier_option_by_no',
         search: 'suppliers_options'
