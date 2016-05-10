@@ -16,6 +16,6 @@ Package.onUse(function(api) {
   api.use('templating@1.0.0');
   api.use('blaze@2.0.0');
   api.use('aldeed:autoform@5.0.0');
-  api.use('twbs:bootstrap');
+  api.use('twbs:bootstrap@3.3.6');
   api.addFiles(['autoform-search-select.js', 'afSearchSelect.html', 'afSearchSelect.css', 'afSearchSelect.js'], 'client');
 });
