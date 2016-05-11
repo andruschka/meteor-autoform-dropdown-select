@@ -2,18 +2,22 @@
 # Dropdown-Select (for Autoform + Bootstrap 3)
 A custom Dropdown-Select (with Method-based search) for Autoform.  
 The available options will be fetched by Methods! (So you don't need to handle Subscriptions - e.g. for huge data stacks...)
+
 ## Install
 ```
 meteor add andruschka:autoform-dropdown-select
 ```
 (Of course you need Bootstrap and Autoform installed first!)
+
 ## Usage
 Just create 2 Methods for fetching the data. The first one is for getting the option Object for an already set value (for example if you are updating an exiting document). The second is for fetching search results as selectable options.
+
 ### The option Object
 Each option Object needs a value (this will get stored to the DB) and a label (this will be displayed).
 ```
 = {value: "1003", label: "Betawerk"}
 ```
+
 ### Initial Method
 Gets (only) invoked by an "update" autoform-field (to get the label for the set value)
 - Passes param: the current value of the doc
@@ -72,3 +76,15 @@ var Item = new SimpleSchema({
 })
 ```
 
+## Stylings
+### Example
+```javascript
+{
+  autoform: {
+    type: 'dropdown-select',
+    // ...
+    fullWidth: true, // make it fullwidth | default: false
+    className: "dropdown-dropup" // custom class name for the dropdown element | default: ""
+  }
+}
+```

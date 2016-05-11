@@ -1,6 +1,6 @@
 Package.describe({
   name: 'andruschka:autoform-dropdown-select',
-  version: '0.1.1',
+  version: '0.1.5',
   // Brief, one-line summary of the package.
   summary: 'A custom Dropdown-Select (with Method-based search) for Autoform.',
   // URL to the Git repository containing the source code for this package.

@@ -1,6 +1,22 @@
-.dropdown.dropdown-afSearchSelect .dropdown-menu {
-  max-width: 200px;
+.dropdown.dropdown-afSearchSelect.full-width>button.dropdown-toggle {
+  width: 100%;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 20px;
+  position: relative;
 }
+.dropdown.dropdown-afSearchSelect.full-width button>.caret {
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+}
+
+
 .dropdown.dropdown-afSearchSelect .dropdown-option-item {
   padding: 5px 10px;
 }

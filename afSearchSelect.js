@@ -35,6 +35,15 @@ Template.afSearchSelect.onCreated(function() {
   this.inputPlaceholder = function() {
     return atts.inputPlaceholder || "Search here ..."
   }
+  this.additionalClasses = function() {
+    let className = ""
+    if (this.data.atts.fullWidth) 
+      className += "full-width"
+    if (this.data.atts.className)
+      className += this.data.atts.className
+    return className
+  }
+  
   // get data on search
   this.autorun(()=> {
     this.loading.set(true)
