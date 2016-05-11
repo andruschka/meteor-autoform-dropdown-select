@@ -6,6 +6,7 @@ The available options will be fetched by Methods! (So you don't need to handle S
 ```
 meteor add andruschka:autoform-dropdown-select
 ```
+(Of course you need Bootstrap and Autoform installed first!)
 ## Usage
 Just create 2 Methods for fetching the data. The first one is for getting the option Object for an already set value (for example if you are updating an exiting document). The second is for fetching search results as selectable options.
 ### The option Object
