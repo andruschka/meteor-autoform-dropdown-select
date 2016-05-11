@@ -74,6 +74,11 @@ Template.afSearchSelect.onRendered(function() {
       })
     }
   })
+  // focus input on shown.bs.dropdown
+  this.$(".dropdown-afSearchSelect").on('shown.bs.dropdown', function(e){
+    let $dd = $(e.currentTarget)
+    $dd.find('input.search-input').focus()
+  })
 })
 
 
